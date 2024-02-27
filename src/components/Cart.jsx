@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { product } from '../assets/data/data'
+import { Items } from './Items'
 
 export const Cart = () => {
   const [cartOpen, setCartOpen] = useState(false)
@@ -29,10 +31,36 @@ export const Cart = () => {
       </div>
     </div>
 
-    <div className={cartOpen ? "fixed top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50": "hidden"}>
-      <div className={cartOpen ? "fixed top-0 right-0 border-l border-zinc-300  w-80 h-screen p-20 bg-white shadow-md z-50": "hidden"}>
-        <h2>Cart</h2>
-        <button onClick={closeCart}>Cerrar</button>
+    <div className={cartOpen ? "fixed flex items-center top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50": "hidden"}>
+      <div className={cartOpen ? "fixed flex flex-col items-center justify-between right-0 border-l border-zinc-300 w-96 h-screen p-3 bg-white shadow-md z-50": "hidden"}>
+        <div className="flex flex-row bg-white justify-between mb-3 w-full">
+          <div className='flex mt-5'>
+            <h2>PRODUCTOS PARA COMPRAR</h2>
+          </div>
+          <div>
+            <button className='text-right' onClick={closeCart}>X</button>
+          </div>
+        </div>
+        <div className='flex flex-col w-full '>
+            <div className='flex flex-col '>
+              {product.slice(0,4).map((item) => (
+                <Items 
+                id={item.id} 
+                cover={item.cover}
+                name={item.name}
+                desc={item.desc}
+                price={item.price}
+                qty={item.qty}
+                category={item.category}
+                totalPrice={item.totalPrice}
+                />
+              ))}
+            </div>
+        </div>
+              <button className='bg-black text-white items-center justify-center w-full rounded-lg h-9'>
+                <span>Priceed to checkout </span>
+                <label htmlFor=''> $3000</label>
+              </button>
       </div>
     </div>
     </>
