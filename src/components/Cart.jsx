@@ -5,7 +5,7 @@ export const Cart = () => {
   const closeCart= () =>{
     setCartOpen(null)
   }
-  return (
+  return ( 
     <>
     <div className='relative flex items-center'onClick={() => setCartOpen(!cartOpen)} >
       <svg
