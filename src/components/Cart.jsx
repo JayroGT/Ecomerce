@@ -43,17 +43,19 @@ export const Cart = () => {
         </div>
         <div className='flex flex-col w-full '>
             <div className='flex flex-col '>
-              {product.slice(0,4).map((item) => (
-                <Items 
-                id={item.id} 
-                cover={item.cover}
-                name={item.name}
-                desc={item.desc}
-                price={item.price}
-                qty={item.qty}
-                category={item.category}
-                totalPrice={item.totalPrice}
-                />
+              {product.slice(0,4).map((item, index) => (
+                <div key={index}>
+                  <Items 
+                  id={item.id} 
+                  cover={item.cover}
+                  name={item.name}
+                  desc={item.desc}
+                  price={item.price}
+                  qty={item.qty}
+                  category={item.category}
+                  totalPrice={item.totalPrice}
+                  />
+                </div>
               ))}
             </div>
         </div>
