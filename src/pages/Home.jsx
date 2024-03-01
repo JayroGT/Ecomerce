@@ -5,12 +5,12 @@ import { Category } from '../components/Category'
 
 export const Home = () => {
   return (
-    <div className='pt-4'>
+    <div className='flex flex-col justify-center items-center h-full pt-20 my-4'>
       <Slider/>
-      <div className='w-full h-screen my-40'>
+      <div className='w-full h-full my-20'>
       <Order/>
-      <Category/>
       </div>
+      <Category/>
     </div>
   )
 } 

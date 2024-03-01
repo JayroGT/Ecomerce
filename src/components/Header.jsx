@@ -47,7 +47,7 @@ export const Header = () => {
                 </div>
             </div>
             <div className="basis-1/2">
-                <div className='flex  h-10 items-center border-r-2 border-b-2 rounded-md border-black-700'>
+                <div className='flex  h-10 items-center border-r-2 border-b-2 rounded-md shadow-lg shadow-gray-500/90'>
                     <div>
                         <svg className="pl-2 w-6 h-6" height="512px" id="Layer_1" viewBox="0 0 512 512" width="512px" xmlns="http://www.w3.org/2000/svg">
                             <path d="M344.5,298c15-23.6,23.8-51.6,23.8-81.7c0-84.1-68.1-152.3-152.1-152.3C132.1,64,64,132.2,64,216.3c0,84.1,68.1,152.3,152.1,152.3 c30.5,0,58.9-9,82.7-24.4l6.9-4.8L414.3,448l33.7-34.3L339.5,305.1L344.5,298z M301.4,131.2c22.7,22.7,35.2,52.9,35.2,85 c0,32.1-12.5,62.3-35.2,85c-22.7,22.7-52.9,35.2-85,35.2c-32.1,0-62.3-12.5-85-35.2c-22.7-22.7-35.2-52.9-35.2-85 c0-32.1,12.5-62.3,35.2-85c22.7-22.7,52.9-35.2,85-35.2C248.5,96,278.7,108.5,301.4,131.2z" />
