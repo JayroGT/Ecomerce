@@ -6,9 +6,9 @@ export const Products = () => {
   return (
         <>
         <section>
-            <div className='grid grid-cols-4'>
+            <div className='grid grid-cols-2 md:grid-cols-4'>
                 {product.map((prod, i) => (
-                    <div key={i} className='h-auto'>
+                    <div key={i}>
                         <ProductCard
                         id={prod?.id}
                         name={prod?.name}
