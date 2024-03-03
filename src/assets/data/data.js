@@ -1,6 +1,6 @@
 export const slide = [
   {
-    image: "../images/slide/slide1.png",
+    image: "../images/slide/slide1.png"
   },
   { image: "../images/slide/slide2.png" },
   { image: "../images/slide/slide3.png" },
@@ -106,7 +106,7 @@ export const product = [
     price: 4.99,
     qty: 1,
     category: "beauty care",
-    cover: "../images/product/product2.jpg",
+    cover: "../../../public/images/product/product2.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -115,7 +115,7 @@ export const product = [
     price: 40.0,
     qty: 1,
     category: "Pregnancy",
-    cover: "../images/product/product3.jpg",
+    cover: "../../../public/images/product/product3.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -124,7 +124,7 @@ export const product = [
     price: 15.0,
     qty: 1,
     category: "Feminine Hygiene",
-    cover: "../images/product/product4.jpg",
+    cover: "../../../public/images/product/product4.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -133,7 +133,7 @@ export const product = [
     price: 18.0,
     qty: 1,
     category: "Feminine Hygiene",
-    cover: "../images/product/product5.png",
+    cover: "../../../public/images/product/product5.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -142,7 +142,7 @@ export const product = [
     price: 10.0,
     qty: 1,
     category: "Sexual Well-Being",
-    cover: "../images/product/product6.jpg",
+    cover: "../../../public/images/product/product6.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -151,7 +151,7 @@ export const product = [
     price: 6.99,
     qty: 1,
     category: "Beauty Care",
-    cover: "../images/product/product7.jpg",
+    cover: "../../../public/images/product/product7.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -160,7 +160,7 @@ export const product = [
     price: 89.95,
     qty: 1,
     category: "Oral Care",
-    cover: "../images/product/product8.png",
+    cover: "../../../public/images/product/product8.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -169,7 +169,7 @@ export const product = [
     price: 8.0,
     qty: 1,
     category: "Household",
-    cover: "../images/product/product9.png",
+    cover: "../../../public/images/product/product9.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -178,7 +178,7 @@ export const product = [
     price: 2.0,
     qty: 1,
     category: "Sexual Well-Being",
-    cover: "../images/product/product10.png",
+    cover: "../../../public/images/product/product10.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -187,7 +187,7 @@ export const product = [
     price: 4.0,
     qty: 1,
     category: "Household",
-    cover: "../images/product/product11.png",
+    cover: "../../../public/images/product/product11.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -196,7 +196,7 @@ export const product = [
     price: 50.0,
     qty: 1,
     category: "Medicine & First Aid",
-    cover: "../images/product/product12.jpg",
+    cover: "../../../public/images/product/product12.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -205,7 +205,7 @@ export const product = [
     price: 15.0,
     qty: 1,
     category: "Medicine & First Aid",
-    cover: "../images/product/product13.jpg",
+    cover: "../../../public/images/product/product13.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -214,7 +214,7 @@ export const product = [
     price: 9.99,
     qty: 1,
     category: "Contraceptive",
-    cover: "../images/product/product14.png",
+    cover: "../../../public/images/product/product14.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -223,7 +223,7 @@ export const product = [
     price: 8.0,
     qty: 1,
     category: "Pregnancy",
-    cover: "../images/product/product15.png",
+    cover: "../../../public/images/product/product15.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -232,7 +232,7 @@ export const product = [
     price: 27.0,
     qty: 1,
     category: "Baby Care",
-    cover: "../images/product/product16.png",
+    cover: "../../../public/images/product/product16.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -241,7 +241,7 @@ export const product = [
     price: 2.99,
     qty: 1,
     category: "Contraceptive",
-    cover: "../images/product/product17.png",
+    cover: "../../../public/images/product/product17.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -250,7 +250,7 @@ export const product = [
     price: 15.95,
     qty: 1,
     category: "Medicine & First Aid",
-    cover: "../images/product/product18.png",
+    cover: "../../../public/images/product/product18.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -259,7 +259,7 @@ export const product = [
     price: 15.0,
     qty: 1,
     category: "Medicine & First Aid",
-    cover: "../images/product/product19.png",
+    cover: "../../../public/images/product/product19.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -268,7 +268,7 @@ export const product = [
     price: 25.0,
     qty: 1,
     category: "Baby Care",
-    cover: "../images/product/product20.png",
+    cover: "../../../public/images/product/product20.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -277,7 +277,7 @@ export const product = [
     price: 15.0,
     qty: 1,
     category: "Feminine Hygiene",
-    cover: "../images/product/product21.jpg",
+    cover: "../../../public/images/product/product21.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -286,7 +286,7 @@ export const product = [
     price: 15.0,
     qty: 1,
     category: "Baby Care",
-    cover: "../images/product/product22.png",
+    cover: "../../../public/images/product/product22.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -295,7 +295,7 @@ export const product = [
     price: 12.0,
     qty: 1,
     category: "Beauty Care",
-    cover: "../images/product/product23.jpg",
+    cover: "../../../public/images/product/product23.jpg",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
   {
@@ -304,7 +304,7 @@ export const product = [
     price: 15.0,
     qty: 1,
     category: "Medicine & First Aid",
-    cover: "../images/product/product24.png",
+    cover: "../../../public/images/product/product24.png",
     desc: "The term cleanser refers to a product that cleans or removes dirt or other substances. A cleanser could be a detergent, and there are many types of cleansers that are produced with a specific objective or focus.",
   },
 ]

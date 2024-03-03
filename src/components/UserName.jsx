@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 export const UserName = () => {
-  const user = true
+  const user = false
   const [open, setOpen] = useState(false)
 
   const close = () =>{
@@ -17,12 +17,23 @@ export const UserName = () => {
           </button>
 
           {open && (
-            <div className='bg-white shadow-md absolute top-20 right-10 w-72 p-4' onClick={close}>
+            <div className='bg-white shadow-lg shadow-black-500/100 absolute top-20 right-10 w-auto p-4 border-t-2' onClick={close}>
               <div className="bg-white w-full">
-                <div>
-                  <div className='flex'>
+                <div className='flex'>
+                  <div>
                     <img className='size-10' src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' alt='lalala' />
                   </div>
+                  <div className='flex flex-col m-2'>
+                  <h4>Nombre del usuario</h4>
+                  <label htmlFor='' className='text-xs'>ubicacion geografica</label>
+                  </div>
+                </div>
+                <div className='flex flex-col items-start'>
+                  <button>My account</button>
+                  <button>My order</button>
+                  <button>Wishlist</button>
+                  <button>Help</button>
+                  <button>Log out</button>
                 </div>
               </div>
             </div>
@@ -30,11 +41,10 @@ export const UserName = () => {
           }
           </>
         ):(
-          "login"
+          <button>My account</button>
         )}
       </div>
     </>
   )
 }
 
- 

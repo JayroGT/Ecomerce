@@ -8,11 +8,12 @@ export const Order = () => {
 
   return (
     <div className="h-full">
-        <div className="w-full px-24 py-4">
+        <div className="w-auto px-15">
         <Stepper>
           {order.map((item,index)=>(
             <div key={index}>
-              <Step>
+              <div className="flex relative">
+              <Step className="">
               {item.id}
               <div className="absolute -bottom-[9rem] w-40 text-center">
                   <Typography
@@ -29,6 +30,7 @@ export const Order = () => {
                   </Typography>
               </div>
               </Step>
+              </div>
             </div>
           ))
 
