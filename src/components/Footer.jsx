@@ -4,7 +4,7 @@ const Footer = () => {
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-20">
             <div>
-              <h6 className="text-xl font-bold mb-4">About</h6>
+              <h6 className="text-xl font-bold mb-4.">About</h6>
               <p className="text-justify">Scanfcode.com <span className="italic">CODE WANTS TO BE SIMPLE</span> is an initiative to help the upcoming programmers with the code. Scanfcode focuses on providing the most efficient code or snippets as the code wants to be simple. We will help programmers build up concepts in different programming languages that include C, C++, Java, HTML, CSS, Bootstrap, JavaScript, PHP, Android, SQL, and Algorithm.</p>
             </div>
   

@@ -7,7 +7,7 @@ export const Products = () => {
         <>
         <section>
             <div className='grid grid-cols-2 md:grid-cols-4'>
-                {product.map((prod, i) => (
+                {product.map((prod,i) => (
                     <div key={i}>
                         <ProductCard
                         id={prod?.id}
