@@ -1,6 +1,12 @@
 import React from 'react'
+import { addCart } from '../store/slice/cartSlice'
+import { useDispatch } from 'react-redux'
 
-export const Items = ({ id, cover, name, desc, price, qty, category, totalPrice }) => {
+export const Items = ({ id, cover, name, price, qty, totalPrice }) => {
+
+
+  const dispatch = useDispatch()
+
   return (
     <div className='flex flex-row w-full m-1' key={id}>
       <div className='flex flex-row'> 
@@ -17,9 +23,22 @@ export const Items = ({ id, cover, name, desc, price, qty, category, totalPrice 
         <div className='flex flex-col '>
           <label htmlFor='' className='text-xs text-zinc-400'>Unite price:  $ {price}</label>
           <div className='flex text-white text-xs'>
-            <button className='bg-zinc-800 w-5 rounded-l'>+</button>
-            <button className='bg-zinc-800 w-5'>10</button>
-            <button className='bg-zinc-800 w-5 rounded-r'>-</button>
+            <button className='bg-black w-5 rounded-l'
+            >
+              -
+            </button>
+
+            <button className='bg-black w-5'
+            >
+              {qty}
+            </button>
+
+            <button className='bg-black w-5 rounded-r'
+            onClick={() => dispatch(addCart({id, name, price}))}
+
+            >
+              +
+              </button>
           </div>
         </div>
           <div className='mr-5 text-xs'>

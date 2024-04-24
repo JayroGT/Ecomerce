@@ -1,12 +1,17 @@
 import React, {useState} from 'react'
-import { product } from '../assets/data/data'
 import { Items } from './Items'
+import { useSelector } from 'react-redux'
 
 export const Cart = () => {
+ const { totalQuantity, itemList } = useSelector ((state) => state.cart)
+
+
   const [cartOpen, setCartOpen] = useState(false)
   const closeCart= () =>{
     setCartOpen(null)
   }
+
+
   return ( 
     <>
     <div className='relative flex items-center'onClick={() => setCartOpen(!cartOpen)} >
@@ -26,9 +31,14 @@ export const Cart = () => {
         <path d="M153,416c0,13.8-11.2,25-25,25s-25-11.2-25-25s11.2-25,25-25S153,402.2,153,416z" />
         <path d="M127.9,96l-11.1-32H64v17h41.7l57.5,213.3c-32.4,11.3-59.9,37.9-65.3,73.1C96,379.1,96,384,96,384h352v-16.7H115.3   c4.7-31.6,38.8-58.1,74.1-62.5s243.3-34.2,243.3-34.2L448,96H127.9z M416,256l-235,33.3c-0.9,0.2-1.8,0.4-2.7,0.6l-44.7-177.3   h297.7L416,256z" />
       </svg>
+        { 
+        
+        totalQuantity===0 ?  null :
       <div className="absolute top-0 right-0 flex items-center justify-center w-4 h-4 bg-red-500 text-white rounded-full">
-        <span className='text-xs'>2</span>
+        <span className='text-xs'>{totalQuantity}</span>
       </div>
+
+        }
     </div>
 
     <div className={cartOpen ? "fixed flex items-center top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50": "hidden"}>
@@ -43,7 +53,7 @@ export const Cart = () => {
         </div>
         <div className='flex flex-col w-full '>
             <div className='flex flex-col '>
-              {product.slice(0,4).map((item, index) => (
+              {itemList.map((item, index) => (
                 <div key={index}>
                   <Items 
                   id={item.id} 
