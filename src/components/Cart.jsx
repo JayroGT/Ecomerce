@@ -11,6 +11,11 @@ export const Cart = () => {
     setCartOpen(null)
   }
 
+  let total = 0
+  itemList.forEach((item) => {
+    total += item.totalPrice
+  })
+
 
   return ( 
     <>
@@ -71,7 +76,7 @@ export const Cart = () => {
         </div>
               <button className='bg-black text-white items-center justify-center w-full rounded-lg h-9'>
                 <span>Priceed to checkout </span>
-                <label htmlFor=''> $3000</label>
+                <span>  holaa  $ {total}</span>
               </button>
       </div>
     </div>

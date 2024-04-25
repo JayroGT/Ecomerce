@@ -1,5 +1,5 @@
 import React from 'react'
-import { addCart } from '../store/slice/cartSlice'
+import { addCart, removeItem } from '../store/slice/cartSlice'
 import { useDispatch } from 'react-redux'
 
 export const Items = ({ id, cover, name, price, qty, totalPrice }) => {
@@ -24,12 +24,12 @@ export const Items = ({ id, cover, name, price, qty, totalPrice }) => {
           <label htmlFor='' className='text-xs text-zinc-400'>Unite price:  $ {price}</label>
           <div className='flex text-white text-xs'>
             <button className='bg-black w-5 rounded-l'
+            onClick={()=> dispatch(removeItem(id))}
             >
               -
             </button>
 
-            <button className='bg-black w-5'
-            >
+            <button className='bg-black w-5'>
               {qty}
             </button>
 
