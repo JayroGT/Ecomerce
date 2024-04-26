@@ -1,7 +1,12 @@
 import React, { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { logout } from '../store/slice/authSlice'
 
 export const UserName = () => {
-  const user = false
+  const {isLoggIn} = useSelector((state) => state.auth)
+  const dispatch = useDispatch()
+
+
   const [open, setOpen] = useState(false)
 
   const close = () =>{
@@ -10,7 +15,7 @@ export const UserName = () => {
   return (
     <>
       <div>
-        {user ? (
+        {isLoggIn ? (
           <>
           <button onClick={()=> setOpen(!open)}>
             <img className='size-10' src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' alt='lalala'  />
@@ -33,7 +38,9 @@ export const UserName = () => {
                   <button>My order</button>
                   <button>Wishlist</button>
                   <button>Help</button>
-                  <button>Log out</button>
+                  <button 
+                  onClick={()=> dispatch(logout())}
+                  >Log out</button>
                 </div>
               </div>
             </div>

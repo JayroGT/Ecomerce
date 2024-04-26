@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {Cart} from "./Cart";
 import { UserName } from "./UserName";
+import { Link } from "react-router-dom";
 
 export const Header = () => {
 
@@ -29,7 +30,7 @@ export const Header = () => {
     <header className='sticky top-0 left-0 w-full shadow-md z-50 bg-white'>   
         <div className="flex flex-row h-20 justify-between items-center mx-3">
             <div className='w-full basis-1/4 '>
-                    <a href="/"> 
+                <Link to={"/"}>
                 <div className="flex ml-2">
                 <svg
                     className="h-20 w-20"
@@ -46,7 +47,7 @@ export const Header = () => {
                     <path d="M84.9,86.6C83.5,86.9,82,87,80.1,87c-3.9,0-6.7-1-8.4-2.9c-1.7-1.9-2.6-4.8-2.6-8.8v-13h-3.6l7.6-16.1h7.6v7.4H89v8.7h-8.2  v12.3c0,2.2,1,3.3,3.1,3.3l0,0c0.8,0,1.6-0.2,2.5-0.4c0.2,3.2,1.2,5.8,2.9,7.8C87.8,85.8,86.2,86.3,84.9,86.6z"/>
                 </svg>    
                 </div>
-                    </a>
+                </Link>
             </div>
             <div className="basis-1/2">
                 <div className='flex  h-10 items-center border-r-2 border-b-2 rounded-md shadow-lg shadow-gray-500/90'>

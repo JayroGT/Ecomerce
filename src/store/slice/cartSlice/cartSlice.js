@@ -15,13 +15,13 @@ export const cartSlice = createSlice({
 
         if (existItem) {
           existItem.qty++   
-          existItem.totalPrice =Math.round((existItem.totalPrice + newItem.price) * 100) / 100;
+          existItem.totalPrice +=newItem.price;
         } else {
           state.itemList.push({
             id:newItem.id,
             price:newItem.price,
             qty:1,
-            totalPrice:Math.round(newItem.price*100)/100,
+            totalPrice:newItem.price,
             name:newItem.name,
             cover:newItem.cover
           })
@@ -38,7 +38,7 @@ export const cartSlice = createSlice({
         state.totalQuantity--
         } else {
           findItem.qty--
-          findItem.totalPrice = Math.round((findItem.totalPrice - findItem.price)*100)/100
+          findItem.totalPrice -= findItem.price ;
         }
       }
     },

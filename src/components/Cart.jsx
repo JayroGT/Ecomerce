@@ -16,6 +16,7 @@ export const Cart = () => {
     total += item.totalPrice
   })
 
+  const round = total.toFixed(2)
 
   return ( 
     <>
@@ -76,7 +77,7 @@ export const Cart = () => {
         </div>
               <button className='bg-black text-white items-center justify-center w-full rounded-lg h-9'>
                 <span>Priceed to checkout </span>
-                <span>  holaa  $ {total}</span>
+                <span>  holaa  $ {round}</span>
               </button>
       </div>
     </div>

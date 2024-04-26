@@ -5,10 +5,13 @@ import { Login } from "./pages/login/Login";
 import Footer from "./components/Footer";
 import { Register } from "./pages/login/Register";
 import { Account } from "./pages/Account";
+import { useSelector } from "react-redux";
  
 function App() { 
+  
   return (
     <> 
+
       <Router>
         <Header />
         <Routes>
@@ -18,7 +21,8 @@ function App() {
           <Route path="/account" element={<Account />} />
         </Routes>
         <Footer/>
-      </Router>
+      </Router> 
+    :
     </>
   );
 }

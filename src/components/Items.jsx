@@ -4,7 +4,9 @@ import { useDispatch } from 'react-redux'
 
 export const Items = ({ id, cover, name, price, qty, totalPrice }) => {
 
-
+  const round = totalPrice.toFixed(2);
+  
+  
   const dispatch = useDispatch()
 
   return (
@@ -42,7 +44,7 @@ export const Items = ({ id, cover, name, price, qty, totalPrice }) => {
           </div>
         </div>
           <div className='mr-5 text-xs'>
-            <p>${totalPrice}</p>  
+            <p> ${round} </p>  
           </div>
         </div>
       </div>
