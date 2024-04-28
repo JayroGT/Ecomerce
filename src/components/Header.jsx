@@ -5,23 +5,6 @@ import { Link } from "react-router-dom";
 
 export const Header = () => {
 
-// // Codigo para que el header quede flotante luego de hacer Scroll 
-
-
-//   const [isScrolled, setIsScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setIsScrolled(window.scrollY > 0); // setea el valor si el scroll se activa
-//     };
-
-//     window.addEventListener("scroll", handleScroll);  // activa la funcion segun la activacion del scrool
-
-//     return () => {
-//       window.removeEventListener("scroll", handleScroll);
-//     };
-//   }, []);
-
   return (
 
     // si el scroll se activa entonces la funcion de arriba setea el valor para que cambie el estilo que indica abajo   "condicion ? True : False"

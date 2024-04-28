@@ -1,24 +1,24 @@
 import React, { useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { logout } from '../store/slice/authSlice'
+import {useAuth0 } from '@auth0/auth0-react'
 
 export const UserName = () => {
-  const {isLoggIn} = useSelector((state) => state.auth)
-  const dispatch = useDispatch()
 
+  const { user, isAuthenticated, loginWithRedirect, logout } = useAuth0();
+  console.log("El login es " + isAuthenticated)
+  console.log(JSON.stringify(user))
 
   const [open, setOpen] = useState(false)
 
   const close = () =>{
-    setOpen(null)
+    setOpen(false)
   }
   return (
     <>
       <div>
-        {isLoggIn ? (
+        {isAuthenticated ? (
           <>
           <button onClick={()=> setOpen(!open)}>
-            <img className='size-10' src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' alt='lalala'  />
+            <img className='size-10' src={user.picture} alt='lalala'  />
           </button>
 
           {open && (
@@ -26,11 +26,10 @@ export const UserName = () => {
               <div className="bg-white w-full">
                 <div className='flex'>
                   <div>
-                    <img className='size-10' src='https://cdn-icons-png.flaticon.com/512/2202/2202112.png' alt='lalala' />
+                    <img className='size-10' src={user.picture} alt='lalala' />
                   </div>
                   <div className='flex flex-col m-2'>
-                  <h4>Nombre del usuario</h4>
-                  <label htmlFor='' className='text-xs'>ubicacion geografica</label>
+                  <h4>{user.name}</h4>
                   </div>
                 </div>
                 <div className='flex flex-col items-start'>
@@ -39,7 +38,7 @@ export const UserName = () => {
                   <button>Wishlist</button>
                   <button>Help</button>
                   <button 
-                  onClick={()=> dispatch(logout())}
+                  onClick={()=> logout()}
                   >Log out</button>
                 </div>
               </div>
@@ -48,7 +47,11 @@ export const UserName = () => {
           }
           </>
         ):(
-          <button>My account</button>
+          <button className="text-white bg-[#050708] hover:bg-[#050708]/90 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#050708]/50 dark:hover:bg-[#050708]/30 me-2 mb-2"
+          onClick={() => loginWithRedirect()}
+          > 
+            Log In
+          </button>
         )}
       </div>
     </>

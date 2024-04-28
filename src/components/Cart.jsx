@@ -1,26 +1,25 @@
-import React, {useState} from 'react'
-import { Items } from './Items'
-import { useSelector } from 'react-redux'
+import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
+import { Items } from './Items';
 
 export const Cart = () => {
- const { totalQuantity, itemList } = useSelector ((state) => state.cart)
+  const { totalQuantity, itemList } = useSelector((state) => state.cart);
+  const [cartOpen, setCartOpen] = useState(false);
 
+  const closeCart = () => {
+    setCartOpen(false);
+  };
 
-  const [cartOpen, setCartOpen] = useState(false)
-  const closeCart= () =>{
-    setCartOpen(null)
-  }
-
-  let total = 0
+  let total = 0;
   itemList.forEach((item) => {
-    total += item.totalPrice
-  })
+    total += item.totalPrice;
+  });
 
-  const round = total.toFixed(2)
+  const round = total.toFixed(2);
 
-  return ( 
+  return (
     <>
-    <div className='relative flex items-center'onClick={() => setCartOpen(!cartOpen)} >
+      <div className="relative flex items-center cursor-pointer" onClick={() => setCartOpen(!cartOpen)}>
       <svg
         className="h-6 w-6"
         height="512px"
@@ -39,30 +38,37 @@ export const Cart = () => {
       </svg>
         { 
         
-        totalQuantity===0 ?  null :
+        totalQuantity === 0 ?  
+        null
+        :
       <div className="absolute top-0 right-0 flex items-center justify-center w-4 h-4 bg-red-500 text-white rounded-full">
         <span className='text-xs'>{totalQuantity}</span>
       </div>
 
         }
-    </div>
+      </div>
 
-    <div className={cartOpen ? "fixed flex items-center top-0 left-0 w-full h-screen bg-black bg-opacity-40 z-50": "hidden"}>
-      <div className={cartOpen ? "fixed flex flex-col items-center justify-between right-0 border-l border-zinc-300 w-96 h-screen p-3 bg-white shadow-md z-50": "hidden"}>
-        <div className="flex flex-row bg-white justify-between mb-3 w-full">
-          <div className='flex mt-5'>
-            <h2>PRODUCTOS PARA COMPRAR</h2>
+      <div className={cartOpen ? "fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-40 z-50" : "hidden"}>
+        <div className={cartOpen ? "flex flex-col h-screen gap-15 fixed right-0 border-l border-zinc-300 w-1/3 h-full bg-white shadow-md z-50" : "hidden"}>
+          <div className="h-16 justify-between p-3 border-b border-gray-300 flex items-center">
+            <h2 className="text-lg font-semibold">Carrito de Compras</h2>
+            <button className='text-gray-600 hover:text-gray-800 focus:outline-none' onClick={closeCart}>
+              <svg
+                className="h-6 w-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
           </div>
-          <div>
-            <button className='text-right' onClick={closeCart}>X</button>
-          </div>
-        </div>
-        <div className='flex flex-col w-full '>
-            <div className='flex flex-col '>
-              {itemList.map((item, index) => (
-                <div key={index}>
-                  <Items 
-                  id={item.id} 
+          <div className='bg-gray-100 h-5/6 overflow-y-auto overflow-x-hidden'>
+            {itemList.map((item, index) => (
+              <div key={index} className="p-5 m-5 ml-5 mr-9">
+                <Items
+                  id={item.id}
                   cover={item.cover}
                   name={item.name}
                   desc={item.desc}
@@ -70,17 +76,24 @@ export const Cart = () => {
                   qty={item.qty}
                   category={item.category}
                   totalPrice={item.totalPrice}
-                  />
-                </div>
-              ))}
+                />
+              </div>
+            ))}
+          </div>
+          <div className=" h-1/4 flex items-center justify-center">
+            <div className="flex flex-col items-center w-3/4">
+              <div className="flex justify-between w-full p-2">
+                <span className="font-semibold">Total:</span>
+                <span className='text-md'>${round}</span>
+              </div>
+              <p className="text-xs text-gray-600">Impuestos y gastos de envío calculados al finalizar la compra.</p>
+              <button className='mt-3 bg-black text-white rounded-md py-2 w-full'>Pagar</button>
+              <p className="text-xs text-gray-600 mt-4">o Continuar Comprando</p>
             </div>
+          </div>
         </div>
-              <button className='bg-black text-white items-center justify-center w-full rounded-lg h-9'>
-                <span>Priceed to checkout </span>
-                <span>  holaa  $ {round}</span>
-              </button>
       </div>
-    </div>
     </>
-  )
-}
+  );
+};
+

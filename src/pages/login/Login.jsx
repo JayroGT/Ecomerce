@@ -1,9 +1,9 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
 import { login } from '../../store/slice/authSlice/authSlice'
+import { useAuth0 } from '@auth0/auth0-react'
 
 export const Login = () => {
-
     const dispatch = useDispatch()
 
 
@@ -80,10 +80,11 @@ export const Login = () => {
                 </form>
             </div>
             <div className='pt- text-white bg-blue-400 hover:bg-blue-500 active:bg-blue-700 rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800'>
-                <a href='/register'>
-                register now
-                </a>
-            </div>
+                        <button
+                        >
+                            test log
+                        </button>
+            </div>  
     </section>
     </>
   )

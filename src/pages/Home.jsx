@@ -6,6 +6,9 @@ import { Products } from '../components/Products'
 
 
 export const Home = () => {
+
+
+
   return (
     <div className='flex flex-col justify-center items-center'>
       <div className='flex  h-full p-4'>
