@@ -5,8 +5,8 @@ import { product } from '../assets/data/data'
 export const Products = () => {
   return (
         <>
-        <section>
-            <div className='grid grid-cols-2 md:grid-cols-4'>
+        <section className='flex w-11/12'>
+            <div className='grid w-full gap-4 grid-cols-1 md:grid-cols-3'>
                 {product.map((prod,i) => (
                     <div key={i}>
                         <ProductCard
