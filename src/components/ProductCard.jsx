@@ -22,7 +22,7 @@ export const ProductCard = (
     <div className='p-4 m-2 h-36 w-11/12 rounded-xl shadow-md border border-gray-200'>
       <div className="flex w-full h-full justify-between items-center bg-white">
         <img
-          className="p-1 rounded-t-lg w-1/4 h-full" // Cambié w-1/3 a w-1/4 para reducir el tamaño
+          className="p-1 rounded-t-lg w-1/4 h-full"
           src={cover}
           alt="product image"
         />
